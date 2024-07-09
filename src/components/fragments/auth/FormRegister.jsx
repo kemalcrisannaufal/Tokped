@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import GoogleLoginButton from "../../elements/Button/GoogleLoginButton";
+import AuthIconButton from "../../elements/Button/AuthIconButton";
 import Separator from "../../elements/Separator/Separator";
 import AuthInput from "../../elements/Input/AuthInput";
 import AuthButton from "../../elements/Button/AuthButton";
+import { ReactComponent as GoogleIcon } from "../../../assets/icons/google.svg";
 
 const FormRegister = () => {
   return (
@@ -35,7 +36,9 @@ const FormRegister = () => {
             </Link>
           </h5>
         </div>
-        <GoogleLoginButton classname={"mt-5"}></GoogleLoginButton>
+        <AuthIconButton classname={"mt-5"} text={"Google"}>
+          <GoogleIcon />
+        </AuthIconButton>
         <Separator></Separator>
         <AuthInput
           classname={"mt-5 mb-8"}
