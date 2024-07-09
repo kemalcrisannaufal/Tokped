@@ -51,11 +51,15 @@ const FormRegister = () => {
           <h5>
             {" "}
             <span className="text-green-600 font-bold">
-              Syarat & Ketentuan
+              <a href="https://www.tokopedia.com/terms?lang=id">
+                Syarat & Ketentuan
+              </a>
             </span>{" "}
             serta{" "}
             <span className="text-green-600 font-bold">
-              Kebijakan Privasi Tokopedia
+              <a href="https://www.tokopedia.com/privacy?lang=id">
+                Kebijakan Privasi Tokopedia
+              </a>
             </span>
             .
           </h5>
