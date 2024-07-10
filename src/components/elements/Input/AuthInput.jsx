@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const AuthInput = (props) => {
-  const { placeholder, classname, text } = props;
+  const { placeholder, classname, text, name } = props;
   return (
     <div className={classname}>
       <div
@@ -11,6 +11,8 @@ const AuthInput = (props) => {
           className="h-full w-full px-4"
           type="text"
           placeholder={placeholder}
+          name={name}
+          id={name}
         />
       </div>
       <div>
@@ -24,6 +26,7 @@ AuthInput.propTypes = {
   placeholder: PropTypes.string,
   classname: PropTypes.string,
   text: PropTypes.string.isRequired,
+  name: PropTypes.string
 };
 
 export default AuthInput;

@@ -24,7 +24,7 @@ const FormRegister = () => {
         </p>
       </div>
 
-      <div className="w-full max-w-lg border-gray-800 rounded-lg p-10 shadow-lg">
+      <div className="w-full max-w-lg border border-slate-300 rounded-lg p-10 shadow-lg">
         <div className="text-center">
           <h1 className="font-bold text-3xl text-slate-700 mb-2">
             Daftar Sekarang
