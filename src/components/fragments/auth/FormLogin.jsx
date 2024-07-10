@@ -8,6 +8,9 @@ import { ReactComponent as GoogleIcon } from "../../../assets/icons/google.svg";
 import { ReactComponent as QRIcon } from "../../../assets/icons/qr.svg";
 
 const FormLogin = () => {
+  const handleLogin = () => {
+    window.location.href = "/";
+  };
   return (
     <div
       className="flex w-full justify-center items-center"
@@ -35,12 +38,16 @@ const FormLogin = () => {
         <div className="mb-3 text-end text-green-600 text-lg">
           <Link>Butuh Bantuan?</Link>
         </div>
-        <AuthButton>Lanjut</AuthButton>
+        <AuthButton onClick={handleLogin}>Lanjut</AuthButton>
         <Separator classname={"my-10"}></Separator>
-        <AuthIconButton classname={"mb-5"} text="Scan Kode QR">
+        <AuthIconButton
+          classname={"mb-5"}
+          text="Scan Kode QR"
+          onClick={handleLogin}
+        >
           <QRIcon className="mr-2" />
         </AuthIconButton>
-        <AuthIconButton text={"Masuk dengan Google"}>
+        <AuthIconButton text={"Masuk dengan Google"} onClick={handleLogin}>
           <GoogleIcon className="mr-2" />
         </AuthIconButton>
       </div>

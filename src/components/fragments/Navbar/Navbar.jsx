@@ -5,11 +5,13 @@ import Input from "../../elements/Input/Input";
 import SearchIcon from "../../../assets/icons/search.svg";
 import TextLinkNavbar from "../../elements/Link/TextLinkNavbar";
 import HeaderNavbar from "./HeaderNavbar";
+import MarkerIcon from "../../../assets/icons/marker.svg";
+import ArrowDown from "../../../assets/icons/arrow_down.svg";
 
 const Navbar = () => {
   return (
     <div>
-      <HeaderNavbar/>
+      <HeaderNavbar />
       <div className="h-32 mx-10 flex">
         <div className="w-1/5 h-3/4 flex items-center justify-between px-5">
           <div>
@@ -49,15 +51,26 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-        <div className="w-1/5 h-3/4 flex items-center px-5">
-          <div className="w-1/4 flex justify-center items-center">
-            <IconButton>
-              <CartIcon></CartIcon>
-            </IconButton>
+        <div className="w-1/5 px-5">
+          <div className="h-3/4 flex items-center ">
+            <div className="w-1/4 flex justify-center items-center">
+              <IconButton>
+                <CartIcon></CartIcon>
+              </IconButton>
+            </div>
+            <div className="w-3/4 flex justify-between border-l px-8 gap-3">
+              <Button bgColor="white">Masuk</Button>
+              <Button bgColor="green">Daftar</Button>
+            </div>
           </div>
-          <div className="w-3/4 flex justify-between border-l px-8 gap-3">
-            <Button bgColor="white">Masuk</Button>
-            <Button bgColor="green">Daftar</Button>
+          <div className="h-1/4 flex justify-end items-center gap-2">
+            <img src={MarkerIcon} alt="marker" className="h-6 w-6" />
+            <p className="text-lg">
+              Dikirim ke <span className="font-bold">Jakarta Pusat</span>
+            </p>
+            <a href="">
+              <img src={ArrowDown} alt="V" className="h-7 w-7" />
+            </a>
           </div>
         </div>
       </div>
