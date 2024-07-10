@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RegisterPage from "./pages/Registration";
 import LoginPage from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import ProductDetailPage from "./pages/ProductDetail";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
     path: "/login",
     element: <LoginPage />,
   },
+  {
+    path: "/product",
+    element: <ProductDetailPage />,
+  },
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

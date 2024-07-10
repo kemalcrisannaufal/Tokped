@@ -4,11 +4,11 @@ import CardProduct from "../components/fragments/Product/CardProduct";
 const Dashboard = () => {
   return (
     <MainLayout>
-      <CardProduct url="/">
+      <CardProduct url="/product">
         <CardProduct.Header image={"images/shoes.jpg"}></CardProduct.Header>
         <CardProduct.Body
           title={
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo maxime id libero fuga sunt doloribus? Tempora quae aliquam voluptate magnam."
+            "Screw-in Stabilizers Washers for Mechanical Keyboard"
           }
           price={10000}
           priceBefore={15000}
