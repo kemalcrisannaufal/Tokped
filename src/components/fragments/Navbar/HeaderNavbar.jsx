@@ -3,15 +3,15 @@ import SmarthphoneIcon from "../../../assets/icons/smartphone.svg";
 
 const HeaderNavbar = () => {
   return (
-    <div className="w-full h-10 bg-slate-100 flex justify-between items-center px-16">
+    <div className="w-full h-9 bg-slate-100 flex justify-between items-center px-16">
       <div className="flex items-center gap-3">
-        <img src={SmarthphoneIcon} alt="phone" className="h-8 w-8" />
+        <img src={SmarthphoneIcon} alt="phone" className="h-6 w-6" />
         <TextLinkNavbar url={"https://www.tokopedia.com/about/"}>
-          Donwload Tokopedia App
+          Download Tokopedia App
         </TextLinkNavbar>
       </div>
       <div>
-        <ul className="flex gap-5">
+        <ul className="flex items-center gap-5 ">
           <li>
             <TextLinkNavbar url={"https://www.tokopedia.com/about/"}>
               Tentang Tokopedia

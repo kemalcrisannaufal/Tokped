@@ -5,7 +5,7 @@ const TextLinkNavbar = (props) => {
   return (
     <a
       href={url}
-      className="text-slate-500 text-md font-semibold hover:text-green-600"
+      className="text-gray-500 text-xs font-normal hover:text-green-600"
     >
       {children}
     </a>

@@ -12,13 +12,17 @@ const Navbar = () => {
   return (
     <div>
       <HeaderNavbar />
-      <div className="h-32 mx-10 flex">
-        <div className="w-1/5 h-3/4 flex items-center justify-between px-5">
-          <div>
-            <img src="images/tkp-logo.png" alt="tokopedia" width={220} />
+      <div className="h-20 mx-5 flex">
+        <div className="w-1/5 h-3/4 flex items-center justify-between px-2">
+          <div className="w-2/3 h-2/3">
+            <img
+              src="images/tkp-logo.png"
+              alt="tokopedia"
+              className="w-full h-full object-contain"
+            />
           </div>
           <Button
-            classname={"border-none text-xl text-slate-700 font-semibold"}
+            classname={"border-none text-md text-slate-700 font-semibold"}
           >
             Kategori
           </Button>
@@ -55,7 +59,7 @@ const Navbar = () => {
           <div className="h-3/4 flex items-center ">
             <div className="w-1/4 flex justify-center items-center">
               <IconButton>
-                <CartIcon></CartIcon>
+                <CartIcon className="h-8 w-8"></CartIcon>
               </IconButton>
             </div>
             <div className="w-3/4 flex justify-between border-l px-8 gap-3">
@@ -64,12 +68,12 @@ const Navbar = () => {
             </div>
           </div>
           <div className="h-1/4 flex justify-end items-center gap-2">
-            <img src={MarkerIcon} alt="marker" className="h-6 w-6" />
-            <p className="text-lg">
+            <img src={MarkerIcon} alt="marker" className="h-4 w-4" />
+            <p className="text-sm">
               Dikirim ke <span className="font-bold">Jakarta Pusat</span>
             </p>
             <a href="">
-              <img src={ArrowDown} alt="V" className="h-7 w-7" />
+              <img src={ArrowDown} alt="V" className="h-5 w-5" />
             </a>
           </div>
         </div>
