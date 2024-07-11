@@ -5,8 +5,8 @@ const ActionButton = (props) => {
     return (
         <a href="">
             <div className={`flex items-center gap-2 px-3 ${classname}`}>
-                <img src={icon} alt="" className="w-5 h-5" />
-                <p className="text-lg font-bold text-slate-600">{label}</p>
+                <img src={icon} alt="" className="w-4 h-4" />
+                <p className="text-sm font-bold text-slate-600">{label}</p>
             </div>
         </a>
     );

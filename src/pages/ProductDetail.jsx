@@ -84,7 +84,7 @@ const ProductDetailPage = () => {
           </div>
         </div>
         <div className="w-1/4">
-          <CardItemCart stock={5} price={8000} />
+          <CardItemCart stock={50} price={29300} />
         </div>
       </div>
     </MainLayout>

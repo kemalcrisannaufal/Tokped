@@ -10,7 +10,7 @@ import { useState } from "react";
 const CardItemCart = (props) => {
   const { stock, price = 0 } = props;
 
-  const [total, setTotal] = useState(0);
+  const [total, setTotal] = useState(1);
 
   const incrementTotal = () => {
     setTotal(total + 1);
@@ -23,38 +23,49 @@ const CardItemCart = (props) => {
   };
 
   return (
-    <div className="max-w-sm border p-5">
-      <h1 className="font-bold text-2xl">Atur jumlah dan catatan</h1>
+    <div className="max-w-72 border-2 py-3 px-4 rounded-lg shadow">
+      <h1 className="font-bold text-lg">Atur jumlah dan catatan</h1>
       <div className="flex justify-between items-center mt-8">
-        <div className="flex justify-center items-center gap-4 h-10 border rounded rounded-lg text-2xl">
-          <button className="w-10" onClick={decrementTotal}>
+        <div className="flex justify-center items-center gap-4 h-10 border rounded rounded-lg text-2lg">
+          <button className="w-10 text-lg" onClick={decrementTotal}>
             -
           </button>
           <p>{total}</p>
-          <button className="w-10 text-green-600" onClick={incrementTotal}>
+          <button
+            className="w-10 text-green-600 font-bold"
+            onClick={incrementTotal}
+          >
             +
           </button>
         </div>
-        <p className="text-xl">
-          Stok Total: <span className="text-orange-500">Sisa {stock}</span>
+        <p className="text-md">
+          Stok Total:{" "}
+          <span
+            className={`font-bold ${
+              stock > 10 ? "text-black" : "text-orange-500"
+            }`}
+          >
+            {" "}
+            {stock <= 10 && "Sisa"} {stock}
+          </span>
         </p>
       </div>
       <div className="flex items-center gap-3 mt-2">
-        <img src={PencilIcon} alt="-" className="w-6 h-6" />
-        <p className="text-green-600 font-semibold">Tambah Catatan</p>
+        <img src={PencilIcon} alt="-" className="w-3 h-3" />
+        <p className="text-sm text-green-800 font-semibold">Tambah Catatan</p>
       </div>
 
       <div className="flex justify-between items-center mt-5">
-        <p className="text-slate-600 text-xl">Subtotal</p>
-        <p className="font-bold text-3xl">
-          {price.toLocaleString("id-ID", {
+        <p className="text-slate-600 text-lg">Subtotal</p>
+        <p className="font-bold text-xl">
+          {(price * total).toLocaleString("id-ID", {
             style: "currency",
             currency: "IDR",
           })}
         </p>
       </div>
 
-      <div className="flex flex-col gap-3 mt-8">
+      <div className="flex flex-col gap-3 mt-3">
         <Button bgColor={"green"}>+ Keranjang</Button>
         <Button>Beli</Button>
       </div>
