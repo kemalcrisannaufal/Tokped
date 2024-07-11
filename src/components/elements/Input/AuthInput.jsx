@@ -5,7 +5,7 @@ const AuthInput = (props) => {
   return (
     <div className={classname}>
       <div
-        className={`flex items-center h-14 border border-slate-300 rounded-lg`}
+        className={`flex items-center h-10 border border-slate-300 rounded-lg`}
       >
         <input
           className="h-full w-full px-4"
@@ -16,7 +16,7 @@ const AuthInput = (props) => {
         />
       </div>
       <div>
-        <p className="text-slate-600">Contoh: {text}</p>
+        <p className="text-slate-600 text-xs">Contoh: {text}</p>
       </div>
     </div>
   );

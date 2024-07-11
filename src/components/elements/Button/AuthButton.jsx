@@ -5,7 +5,7 @@ const AuthButton = (props) => {
   return (
     <button
       type={type}
-      className="w-full h-16 text-white bg-green-600 rounded-lg text-xl font-bold"
+      className="w-full h-12 text-white bg-green-600 rounded-lg text-lg font-bold"
       onClick={onClick}
     >
       {children}

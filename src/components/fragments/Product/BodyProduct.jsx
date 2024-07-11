@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 import ReadMore from "../../elements/ReadMore/ReadMore";
+import StoreProductInformation from "./StoreProductInformation";
 
 const BodyProduct = (props) => {
   const {
@@ -26,65 +27,47 @@ const BodyProduct = (props) => {
 
   return (
     <div className="border-b pb-3">
-      <div className="flex border-t border-b">
-        <div
-          className={`cursor-pointer px-8 py-2 font-bold ${
-            tabIndex == 0
-              ? "text-green-600 border-b-4 border-green-600"
-              : "text-slate-600"
-          }`}
-          onClick={() => changeTabIndex(0)}
-        >
-          Detail
-        </div>
-        <div
-          className={`cursor-pointer px-4 py-2 font-bold ${
-            tabIndex == 1
-              ? "text-green-600 border-b-4 border-green-600"
-              : "text-slate-600"
-          }`}
-          onClick={() => changeTabIndex(1)}
-        >
-          Info Penting
-        </div>
-      </div>
+      <div className="border-b pb-3">
+        <TabBar tabIndex={tabIndex} onChangeTabIndex={changeTabIndex} />
 
-      {tabIndex === 0 ? (
-        <div className="mt-1">
-          <div className="text-md text-slate-500 font-medium">
-            {isFood && (
+        {tabIndex === 0 ? (
+          <div className="mt-1">
+            <div className="text-md text-slate-500 font-medium">
+              {isFood && (
+                <TextInformation
+                  info={"Sertifikasi"}
+                  value={isHalal ? "Halal" : "Non-Halal"}
+                />
+              )}
+
+              <TextInformation info={"Kondisi"} value={condition} />
+              <TextInformation info={"Min.Pemesanan"} value={minOrder} />
               <TextInformation
-                info={"Sertifikasi"}
-                value={isHalal ? "Halal" : "Non-Halal"}
+                info={"Etalase"}
+                value={etalase}
+                classname={"text-green-600"}
               />
-            )}
+            </div>
 
-            <TextInformation info={"Kondisi"} value={condition} />
-            <TextInformation info={"Min.Pemesanan"} value={minOrder} />
-            <TextInformation
-              info={"Etalase"}
-              value={etalase}
-              classname={"text-green-600"}
-            />
+            <div className="mt-1">
+              <ReadMore
+                text={description}
+                showFullText={showFullText}
+                onClick={toggleSetFullText}
+              ></ReadMore>
+            </div>
           </div>
-
+        ) : (
           <div className="mt-1">
             <ReadMore
-              text={description}
+              text={importantInformation}
               showFullText={showFullText}
               onClick={toggleSetFullText}
             ></ReadMore>
           </div>
-        </div>
-      ) : (
-        <div className="mt-1">
-          <ReadMore
-            text={importantInformation}
-            showFullText={showFullText}
-            onClick={toggleSetFullText}
-          ></ReadMore>
-        </div>
-      )}
+        )}
+      </div>
+      <StoreProductInformation />
     </div>
   );
 };
@@ -97,6 +80,43 @@ BodyProduct.propTypes = {
   etalase: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   importantInformation: PropTypes.string.isRequired,
+};
+
+const TabBar = (props) => {
+  const { tabIndex, onChangeTabIndex } = props;
+
+  const changeIndex = (idx) => {
+    onChangeTabIndex(idx);
+  };
+  return (
+    <div className="flex border-t border-b">
+      <div
+        className={`cursor-pointer px-8 py-2 font-bold ${
+          tabIndex == 0
+            ? "text-green-600 border-b-4 border-green-600"
+            : "text-slate-600"
+        }`}
+        onClick={() => changeIndex(0)}
+      >
+        Detail
+      </div>
+      <div
+        className={`cursor-pointer px-4 py-2 font-bold ${
+          tabIndex == 1
+            ? "text-green-600 border-b-4 border-green-600"
+            : "text-slate-600"
+        }`}
+        onClick={() => changeIndex(1)}
+      >
+        Info Penting
+      </div>
+    </div>
+  );
+};
+
+TabBar.propTypes = {
+  tabIndex: PropTypes.number,
+  onChangeTabIndex: PropTypes.func,
 };
 
 const TextInformation = (props) => {

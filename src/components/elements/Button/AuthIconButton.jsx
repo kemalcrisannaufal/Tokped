@@ -4,9 +4,9 @@ const AuthIconButton = (props) => {
   const { classname, children, text } = props;
   return (
     <button
-      className={`w-full h-14 py-2 border rounded-lg border-slate-300 ${classname}`}
+      className={`w-full h-12 py-1 border rounded-lg border-slate-300 ${classname}`}
     >
-      <div className="flex items-center justify-center text-xl text-slate-500 font-bold">
+      <div className="flex items-center justify-center text-sm text-slate-500 font-bold">
         {children}
         {text}
       </div>

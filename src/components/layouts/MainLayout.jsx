@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const MainLayout = (props) => {
   const { children } = props;
   return (
-    <div>
+    <div className="min-w-[1520px]">
       <Navbar></Navbar>
       <div className="m-10 mx-32">{children}</div>
     </div>

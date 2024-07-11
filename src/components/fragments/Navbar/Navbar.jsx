@@ -11,9 +11,9 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="sticky top-0 bg-white min-w-[1520px] w-full">
       <HeaderNavbar />
-      <div className="h-20 mx-5 flex">
+      <div className="h-20 mx-5 flex pb-2">
         <div className="w-1/5 h-3/4 flex items-center justify-between px-2">
           <div className="w-2/3 h-2/3">
             <Link to={"/"}>

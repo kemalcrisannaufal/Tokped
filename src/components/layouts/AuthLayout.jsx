@@ -5,7 +5,7 @@ import Footer from "../elements/Footer/Footer";
 const AuthLayout = (props) => {
   const { children, type } = props;
   return (
-    <div className="flex flex-col w-full min-h-screen justify-between items-center mt-8">
+    <div className="flex flex-col min-w-[1520px] w-full min-h-screen justify-between items-center mt-8">
       <img
         src="images/tkp-logo.png"
         alt=""

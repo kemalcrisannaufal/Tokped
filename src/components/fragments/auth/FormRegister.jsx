@@ -12,24 +12,24 @@ const FormRegister = () => {
         <img
           draggable="false"
           src="images/register_icon_new.png"
-          alt=""
-          width={450}
+          alt="-"
+          width={350}
           className="mb-5"
         />
-        <h5 className="text-3xl font-bold text-center py-2">
+        <h5 className="text-xl font-bold text-center py-2">
           Jual Beli Mudah Hanya di Tokopedia
         </h5>
-        <p className="text-lg text-slate-700 text-center">
+        <p className="text-md text-slate-700 text-center">
           Gabung dan rasakan kemudahan bertransaksi di Tokopedia
         </p>
       </div>
 
-      <div className="w-full max-w-lg border border-slate-300 rounded-lg p-10 shadow-lg">
+      <div className="w-full max-w-md border border-slate-300 rounded-lg p-10 shadow-lg">
         <div className="text-center">
-          <h1 className="font-bold text-3xl text-slate-700 mb-2">
+          <h1 className="font-bold text-2xl text-slate-700 mb-2">
             Daftar Sekarang
           </h1>
-          <h5 className="text-xl">
+          <h5 className="text-md">
             Sudah Punya akun Tokopedia?{" "}
             <Link to={"/login"} className="text-green-600 font-bold">
               Masuk
@@ -46,7 +46,7 @@ const FormRegister = () => {
           text="email@tokopedia.com"
         />
         <AuthButton>Daftar</AuthButton>
-        <div className="mt-5 text-center text-md font-normal text-slate-800">
+        <div className="mt-5 text-center text-sm font-normal text-slate-800">
           <h5>Dengan mendaftar, Saya menyetujui</h5>
           <h5>
             {" "}

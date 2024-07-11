@@ -50,8 +50,8 @@ const ProductDetailPage = () => {
   return (
     <MainLayout>
       <div className="flex">
-        <div className="w-3/4 flex">
-          <div className="w-2/5 flex justify-center">
+        <div className="w-3/4 flex flex-shrink-0" id="yang_ini">
+          <div className="w-2/5 flex flex-shrink-0 justify-center">
             <div className="w-80 h-80 border rounded-lg shadow">
               <img
                 src="images/tropicana.jpg"
@@ -60,7 +60,7 @@ const ProductDetailPage = () => {
               />
             </div>
           </div>
-          <div className="w-3/5 px-14">
+          <div className="w-3/5 px-14" id="ini_discroll">
             <HeaderProduct
               title="Tropicana Slim Cafe Latte (10 sch) - Kopi Bebas Gula"
               sold={10000}

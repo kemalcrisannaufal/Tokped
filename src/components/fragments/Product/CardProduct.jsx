@@ -9,7 +9,7 @@ const CardProduct = (props) => {
   const { children, url } = props;
   return (
     <Link to={url}>
-      <div className="w-full max-w-56 border rounded-lg bg-cover shadow-lg">
+      <div className="w-40 border rounded-lg bg-cover shadow-lg">
         {children}
       </div>
     </Link>
@@ -100,7 +100,7 @@ const Body = (props) => {
           <img src={StarIcon} alt="*" className="h-4 w-4" />
           <div>
             <p>
-              {rating.toFixed(1)} | {sold}+ terjual
+              {rating.toFixed(1)} | {sold/1000}Rb+ terjual
             </p>
           </div>
         </div>
