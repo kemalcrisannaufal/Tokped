@@ -7,6 +7,7 @@ import TextLinkNavbar from "../../elements/Link/TextLinkNavbar";
 import HeaderNavbar from "./HeaderNavbar";
 import MarkerIcon from "../../../assets/icons/marker.svg";
 import ArrowDown from "../../../assets/icons/arrow_down.svg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -15,11 +16,13 @@ const Navbar = () => {
       <div className="h-20 mx-5 flex">
         <div className="w-1/5 h-3/4 flex items-center justify-between px-2">
           <div className="w-2/3 h-2/3">
-            <img
-              src="images/tkp-logo.png"
-              alt="tokopedia"
-              className="w-full h-full object-contain"
-            />
+            <Link to={"/"}>
+              <img
+                src="images/tkp-logo.png"
+                alt="tokopedia"
+                className="w-full h-full object-contain"
+              />
+            </Link>
           </div>
           <Button
             classname={"border-none text-md text-slate-700 font-semibold"}

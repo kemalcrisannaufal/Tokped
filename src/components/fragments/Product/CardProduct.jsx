@@ -3,6 +3,7 @@ import StoreIcon from "../../../assets/icons/store_icon.svg";
 import StarSellerIcon from "../../../assets/icons/star_seller.svg";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const CardProduct = (props) => {
   const { children, url } = props;
@@ -44,7 +45,10 @@ const Body = (props) => {
     place,
     rating,
     sold,
+    storeName,
   } = props;
+
+  const [name, setName] = useState(place);
   return (
     <>
       <div className="w-full p-4 pb-5 flex flex-col">
@@ -82,8 +86,13 @@ const Body = (props) => {
             alt="*"
             className="h-4 w-4"
           />
-          <div>
-            <p>{place}</p>
+          <div className="transition duration-300 ease-in-out transform">
+            <div
+              onMouseEnter={() => setName(storeName)}
+              onMouseLeave={() => setName(place)}
+            >
+              <p>{name}</p>
+            </div>
           </div>
         </div>
 
@@ -110,6 +119,7 @@ Body.propTypes = {
   place: PropTypes.string.isRequired,
   rating: PropTypes.number.isRequired,
   sold: PropTypes.number.isRequired,
+  storeName: PropTypes.string.isRequired,
 };
 
 CardProduct.Header = Header;

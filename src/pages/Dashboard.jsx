@@ -5,19 +5,20 @@ const Dashboard = () => {
   return (
     <MainLayout>
       <CardProduct url="/product">
-        <CardProduct.Header image={"images/shoes.jpg"}></CardProduct.Header>
+        <CardProduct.Header image={"images/tropicana.jpg"}></CardProduct.Header>
         <CardProduct.Body
           title={
-            "Screw-in Stabilizers Washers for Mechanical Keyboard"
+            "Tropicana Slim Cafe Latte (10 sch) - Kopi Bebas Gula"
           }
-          price={10000}
-          priceBefore={15000}
+          price={29300}
+          priceBefore={57700}
           discountPriceBefore={10}
-          discount={10000}
+          discount={182000}
           isStarSeller={true}
           place={"Jakarta Pusat"}
           rating={5.0}
           sold={40000}
+          storeName="Raedam Tbk"
         ></CardProduct.Body>
       </CardProduct>
     </MainLayout>
