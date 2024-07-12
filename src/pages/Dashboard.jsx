@@ -1,6 +1,7 @@
 import MainLayout from "../components/layouts/MainLayout";
 import CardProduct from "../components/fragments/Product/CardProduct";
 import Carousel from "../components/elements/Carrousel/Carrousel";
+import CategoryTopUpCard from "../components/fragments/Dashboard/CategoryTopUpCard/index.jsx";
 
 const Dashboard = () => {
   const images = [
@@ -12,6 +13,7 @@ const Dashboard = () => {
   return (
     <MainLayout>
       <Carousel images={images}></Carousel>
+      <CategoryTopUpCard/>
       <div className="flex gap-2">
         
         <CardProduct url="/product">

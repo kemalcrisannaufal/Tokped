@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import AuthIconButton from "../../elements/Button/AuthIconButton";
 import Separator from "../../elements/Separator/Separator";
-import AuthInput from "../../elements/Input/AuthInput";
+import AuthInput from "../../elements/Input/Auth/AuthInput";
 import AuthButton from "../../elements/Button/AuthButton";
 import { ReactComponent as GoogleIcon } from "../../../assets/icons/google.svg";
 

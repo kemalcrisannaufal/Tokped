@@ -1,5 +1,5 @@
 import backgroundImage from "../../../../public/images/login-bg.png";
-import AuthInput from "../../elements/Input/AuthInput";
+import AuthInput from "../../elements/Input/Auth/AuthInput";
 import { Link } from "react-router-dom";
 import AuthButton from "../../elements/Button/AuthButton";
 import Separator from "../../elements/Separator/Separator";

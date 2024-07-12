@@ -1,7 +1,7 @@
 import Button from "../../elements/Button/Button";
 import IconButton from "../../elements/Button/IconButton";
 import { ReactComponent as CartIcon } from "../../../assets/icons/cart.svg";
-import Input from "../../elements/Input/Input";
+import Input from "../../elements/Input/Auth/Input";
 import SearchIcon from "../../../assets/icons/search.svg";
 import TextLinkNavbar from "../../elements/Link/TextLinkNavbar";
 import HeaderNavbar from "./HeaderNavbar";
@@ -66,8 +66,18 @@ const Navbar = () => {
               </IconButton>
             </div>
             <div className="w-3/4 flex justify-between border-l px-8 gap-3">
-              <Button bgColor="white">Masuk</Button>
-              <Button bgColor="green">Daftar</Button>
+              <Button
+                bgColor="white"
+                onClick={() => (window.location.href = "/login")}
+              >
+                Masuk
+              </Button>
+              <Button
+                bgColor="green"
+                onClick={() => (window.location.href = "/register")}
+              >
+                Daftar
+              </Button>
             </div>
           </div>
           <div className="h-1/4 flex justify-end items-center gap-2">
