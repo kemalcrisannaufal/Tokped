@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="sticky top-0 bg-white min-w-[1520px] w-full">
+    <div className="sticky top-0 bg-white min-w-[1520px] w-full z-50">
       <HeaderNavbar />
       <div className="h-20 mx-5 flex pb-2">
         <div className="w-1/5 h-3/4 flex items-center justify-between px-2">
