@@ -6,8 +6,8 @@ const DropDown = (props) => {
   return (
     <div>
       <Label htmlFor={name}>{label}</Label>
-      <div className={`w-full border rounded-md p-2 ${classname}`}>
-        <select name={name} id={name} className="w-full" defaultValue={""}>
+      <div className={`w-full border rounded-md ${classname}`}>
+        <select name={name} id={name} className="w-full p-2" defaultValue={""}>
           {option.map((item, index) => (
             <option key={index} value={value[index]}>
               {item}
