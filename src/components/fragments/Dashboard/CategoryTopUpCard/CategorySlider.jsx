@@ -24,7 +24,7 @@ function NextArrow(props) {
 
 NextArrow.propTypes = {
   className: PropTypes.string,
-  style: PropTypes.string,
+  style: PropTypes.object,
   onClick: PropTypes.func,
 };
 
@@ -48,7 +48,7 @@ function PrevArrow(props) {
 
 PrevArrow.propTypes = {
   className: PropTypes.string,
-  style: PropTypes.string,
+  style: PropTypes.object,
   onClick: PropTypes.func,
 };
 
@@ -66,7 +66,7 @@ const CategorySlider = (props) => {
 
   return (
     <div>
-      <Slider {...settings} className="w-full">
+      <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index}>
             <CategoryCard image={image} />
